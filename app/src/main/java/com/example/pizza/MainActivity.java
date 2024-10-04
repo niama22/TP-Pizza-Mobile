@@ -2,7 +2,10 @@ package com.example.pizza;
 
 import static com.example.pizza.R.id.listView;
 
+
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -29,12 +32,14 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton partage;
 
     private ProduitService fs ;
+
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
         list=findViewById(R.id.listView);
 
         partage=findViewById(R.id.imageButton3);
@@ -197,6 +202,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         partage.setImageResource(R.drawable.partage);
-
+    }
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setMessage("Voulez-vous vraiment quitter l'application ?")
+                .setCancelable(false)
+                .setPositiveButton("Oui", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        // Appelle la méthode onBackPressed de la classe parente pour fermer l'activité
+                        MainActivity.super.onBackPressed(); // Remplacez MainActivity par le nom de votre activité
+                    }
+                })
+                .setNegativeButton("Non", null) // "Non" fermera simplement le dialog
+                .show();
     }
 }
