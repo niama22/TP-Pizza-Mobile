@@ -11,7 +11,6 @@ Sakhr Niama
 
 - **Parcourir les Pizzas** : Visualiser toutes les pizzas disponibles dans une ListView.
 - **Détails de la Pizza** : Afficher la description, les ingrédients, et les étapes de préparation d'une pizza lors d'un clic sur un élément de la liste.
-- **Statistiques de Visite** : Afficher le nombre d'utilisateurs qui ont visité chaque recette.
 
 ## Vidéo de Démonstration
 
