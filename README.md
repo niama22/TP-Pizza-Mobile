@@ -5,7 +5,7 @@
 Cette application mobile permet aux utilisateurs de parcourir une liste de pizzas disponibles. En cliquant sur une pizza, les utilisateurs peuvent voir des détails tels que la description, les ingrédients, les étapes de préparation.L'objectif de l'application est de fournir une expérience utilisateur fluide pour découvrir et apprendre à préparer leurs pizzas préférées.
 
 ## Auteur
-Sakhr Niama
+Développé par SAKHR niama dans le cadre d'un exercice de 
 
 ## Fonctionnalités
 
